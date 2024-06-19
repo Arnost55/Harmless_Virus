@@ -6,19 +6,25 @@ If answer = vbYes Then
     Dim objShell
     Set objShell = CreateObject("WScript.Shell")
 
-    ' Launch the batch script
-    objShell.Run "%USERPROFILE%/2.bat", 0, True
+    ' Get the user profile path
+    Dim userProfile
+    userProfile = objShell.ExpandEnvironmentStrings("%USERPROFILE%")
 
-    Set objShell = Nothing
+    ' Launch the batch script
+    objShell.Run userProfile & "\2.bat", 0, True
+
 Else
     ' Code to execute if user selects No
     MsgBox "You chose No!"
     Dim objShell
     Set objShell = CreateObject("WScript.Shell")
 
-    ' Launch the batch script
-    objShell.Run "%USERPROFILE%/3.bat", 0, True
+    ' Get the user profile path
+    Dim userProfile
+    userProfile = objShell.ExpandEnvironmentStrings("%USERPROFILE%")
 
-    Set objShell = Nothing
+    ' Launch the batch script
+    objShell.Run userProfile & "\3.bat", 0, True
+
 
 End If
